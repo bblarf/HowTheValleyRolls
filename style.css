@@ -2,6 +2,8 @@ body {
     background-image: url(sources/pictures/backgroundtilepng.png);
     background-repeat: repeat;
     background-size: 37%;
+    background-position: center;
+    background-color: #000000;
     font-family: 'Times New Roman', Times, serif;
 }
 
@@ -21,5 +23,26 @@ body {
 }
 
 .tracklist {
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.list{
+    list-style: none;
+}
+
+.albumart {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.albumart:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.8);
 }
