@@ -12,6 +12,8 @@ jobs:
         uses: bcomnes/deploy-to-neocities@v1
         with:
           api_token: ${{ secrets.NEOCITIES_API_TOKEN }}
-          cleanup: false # Set to true to delete files on Neocities not in your repo
-          dist_dir: . # Change to '.' if your files are in the root directory
-          exclude: .git/**
+          cleanup: false
+          dist_dir: .
+          exclude: |
+            .git/**
+            .github/**
