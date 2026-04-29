@@ -17,3 +17,4 @@ jobs:
           exclude: |
             .git/**
             .github/**
+            sources/music/**
