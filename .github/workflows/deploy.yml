@@ -7,10 +7,14 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Deploy to neocities
-        uses: bcomnes/deploy-to-neocities@v1
+        uses: bcomnes/deploy-to-neocities@v3
         with:
-          api_token: ${{ secrets.NEOCITIES_API_TOKEN }}
-          cleanup: false # Set to true to delete files on Neocities not in your repo
-          dist_dir: . # Change to '.' if your files are in the root directory
+          api_key: ${{ secrets.NEOCITIES_API_TOKEN }}
+          cleanup: false
+          dist_dir: .
+          neocities_supporter: true
+          exclude: |
+            .git/**
+            .github/**
